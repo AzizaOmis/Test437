@@ -63,7 +63,6 @@ class Search{
         .then(res => this.apiResult(res))
         .catch((err)=>{
             throw console.log(err)
-            
         })
     }
     async apiResult(res){
