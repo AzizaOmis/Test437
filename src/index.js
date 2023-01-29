@@ -58,7 +58,8 @@ class Search{
         }
     }
     async api(inputValue){
-        return await fetch(`https://api.github.com/search/repositories?q=${inputValue}&per_page=5`)
+        const api = `https://api.github.com/search/repositories?q=${inputValue}&per_page=5`
+        return await fetch(api)
         .then(res => this.apiResult(res))
         .catch((err)=>{
             throw console.log(err)
